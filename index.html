@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>My CSS Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+        nav,
+header,
+footer
+{
+    display:block;
+}
+body
+{
+    line-height: 1;
+    margin:0;
+}
+label
+{
+    font-size: 35px;
+    font-weight: 600;
+}
+p{
+    font-size: 20px;
+    line-height: 1.2;
+}
+.container
+{
+    width: 100%;
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+.row
+{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.row::after{
+    display: table;
+    clear: both;
+    content: "";
+}
+.col-1 {width: 8.33%};
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+*{
+ box-sizing: border-box;   
+}
+/*############Nav bar######*/
+nav
+{
+    width:100%
+    margin:0;
+}
+nav ul
+{
+    background-color: #eee;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+ul.topnav li
+{
+    list-style: none;
+    float:left;
+}
+ul.topnav li.topnav-right
+
+{
+    float:right;
+}
+ul.topnav li a
+{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    min-height: 16px;
+    padding: 14px;
+    text-transform: uppercase;
+    color: #777;
+}
+ul.topnav li a:hover
+{
+    background-color: #0080ff;
+    color: #fff;
+}
+ul.topnav li.dropdownIcon
+{
+    display: none;
+}
+/*########custom styles################*/
+#section-1-gradient
+{
+    background: linear-gradient(#076DFF,#65a5ff);
+}
+div.box{
+    text-align: center;
+    margin: 24px;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px 0 rgba(0,0,0,.1);
+}
+div.icon
+{
+    width:100%;
+}
+div.leftSide-col{
+    margin-left: 30%;
+}
+div.rightSide-col
+{
+    margin-left: 30%;
+}
+h1.large{
+    color: #fff;
+    font-size: 56px;
+    margin:0;
+    line-height: 70px;
+}
+h1.section2Header
+{
+    font-size: 65px;
+    text-align: center;
+}
+form h2{
+    color: #fff;
+}
+input[type="text"]{
+    font-size: 20px;
+    width: 400px;
+    min-width: 100px;
+    padding: 5px;
+    border-radius: 7px;
+}
+/*#############Mobile#################*/
+@media screen and (max-width: 680px)
+{
+   ul.topnav li:not(:nth-child(1))
+    {
+        display: none;
+    }
+
+ul.topnav li.dropdownIcon{
+    display: block;
+    float: right;
+}
+ul.topnav.responsive li.dropdownIcon
+{
+    position: absolute;
+    top:0;
+    right:0;
+}
+ul.topnav.responsive{
+    position: relative;
+}
+
+ul.topnav.responsive li
+{
+    display: inline;
+    float:none;
+}
+
+ul.topnav.responsive li a{
+    display: block;
+    text-align: left;
+}
+    .col-2{
+        width: 100%;
+        margin: 0;
+    }
+    .col-4{
+        width: 100%;
+        margin: 0;
+    }
+    .col-6{
+       width: 100%;
+        margin: 0; 
+    }
+    div.leftSide-col,
+    div.rightSide-col
+    {
+        margin: 15px;
+    }
+    input[type="text"]
+    {
+        width=350px;
+    }
+    .videoContainer iframe
+    {
+       position: relative;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+}
+div.pp {
+   height: 150px;
+   width: 150px;
+   position: relative;
+  
+}
+
+h3 {
+    background-color: dodgerblue;
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    animation: move 5s infinite linear;
+    position: absolute;
+    color: aliceblue;
+    font-size: 40px;
+   
+}
+
+
+@keyframes move {
+  
+   0% { left: 0px; top: 0%; transform: translate(-0%, 0%);}
+   25% { left: 0px; top: 100%; transform: translate(0%, -100%);}
+  
+   
+}
+
+    </style>
+    <body>
+        <nav>
+            <ul class="topnav" id="dropdownClick">
+                
+                <li><a class="active" href="#home">home</a></li>
+                <li><a href="#news">news</a></li>
+                <li><a href="#contact">contact</a></li>
+                <li><a href="#about">about</a></li>
+                <li class="topnav-right"><a href="#sign up">sign up</a></li>
+                <li class="topnav-right"><a href="#sign in">sign in</a></li>
+                <li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li>
+            </ul>
+             </nav>
+        <div class="container" id="section-1-gradient">
+            <div class="row">
+              <div class="col-2 pp">
+                <div>
+                     <h3>Welcome!!</h3>
+                </div>
+                  </div>
+                  <div class="col-4">
+                  <div class="leftSide-col">
+                  <h1 class="large">crazy radness</h1>
+                      <h1 class="large">made for developers</h1>
+                  </div>
+                  <form>
+                  <div class="leftSide-col">
+                      <h2>UserName</h2>
+                      <input class="inputbox" name"username" type="text" placeholder="UserName">
+                      <h2>Password</h2>
+                      <input class="inputbox" name"password" type="text" placeholder="Password">
+                  </div>
+                      </form>
+                </div>  
+                <div class="col-6">
+                    <div class="rightSide-col">
+                        <div class="videoContainer">
+                       <iframe width="560" height="315" src="https://www.youtube.com/embed/sSkzthVolWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <header><h1 class="section2Header">The Standards of Awesomeness</h1></header>
+        <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="box">
+                    <div class="icon">
+               <img src="lion.jpg">
+                        </div>
+                    <label>Chat With Me</label>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="box">
+                    <div class="icon">
+               <img src="lion.jpg">
+                        </div>
+                    <label>Learn to Draw</label>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="box">
+                    <div class="icon">
+               <img src="lion.jpg">
+                        </div>
+                    <label>Become an Artist</label>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+            <script>
+                function dropdownMenu()
+                {
+                    var x=document.getElementById("dropdownClick")
+                    if(x.className === "topnav")
+                        {
+                          x.className += " responsive";  
+                        }
+                    else{
+                        x.className = "topnav";
+                    }
+                }
+            </script>
+            
+       
+        </body>
+</html>
